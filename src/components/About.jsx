@@ -1,6 +1,20 @@
 import profileImg from "../assets/profile.jpeg";
+import { useState } from "react";
 
 export default function About() {
+  const [showCV, setShowCV] = useState(false);
+
+  const handleViewCV = () => {
+    setShowCV(true);
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'CV.pdf';
+    link.click();
+  };
+
   return (
     <section
       id="about"
@@ -49,9 +63,57 @@ export default function About() {
             visualization tools. I enjoy collaborating in teams, solving complex
             problems, and building user-friendly, modern applications.
           </p>
+
+          {/* CV Button */}
+          <button
+            onClick={handleViewCV}
+            className="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg 
+                       hover:bg-cyan-500 transition-all duration-300 
+                       shadow-[0_0_20px_rgba(34,211,238,0.5)]
+                       hover:shadow-[0_0_30px_rgba(34,211,238,0.8)]"
+          >
+            View CV
+          </button>
         </div>
 
       </div>
+
+      {/* CV Modal */}
+      {showCV && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+          <div className="bg-[#0a1628] rounded-lg max-w-4xl w-full max-h-[90vh] flex flex-col">
+            {/* Modal Header */}
+            <div className="flex justify-between items-center p-4 border-b border-cyan-400/20">
+              <h3 className="text-2xl font-bold text-white">My CV</h3>
+              <div className="flex gap-3">
+                <button
+                  onClick={handleDownloadCV}
+                  className="px-4 py-2 bg-cyan-400 text-black font-semibold rounded 
+                           hover:bg-cyan-500 transition-all duration-300"
+                >
+                  Download
+                </button>
+                <button
+                  onClick={() => setShowCV(false)}
+                  className="px-4 py-2 bg-red-500 text-white font-semibold rounded 
+                           hover:bg-red-600 transition-all duration-300"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            
+            {/* PDF Viewer */}
+            <div className="flex-1 overflow-auto p-4">
+              <iframe
+                src="/CV.pdf"
+                className="w-full h-full min-h-[600px] rounded"
+                title="CV Preview"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
