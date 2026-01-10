@@ -54,14 +54,18 @@ export default function About() {
           </h3>
 
           <p className="text-gray-400 leading-relaxed mb-6">
-            I am an Information and Communication Technology (ICT) undergraduate
-            at Uva Wellassa University with a strong interest in Business
-            Intelligence and Full-Stack Development.
-            <br /><br />
-            I have gained hands-on experience through academic and personal
-            projects using technologies such as React, MERN stack, SQL, and data
-            visualization tools. I enjoy collaborating in teams, solving complex
-            problems, and building user-friendly, modern applications.
+           I am an ICT undergraduate with a strong interest in Business
+            Intelligence and full-stack software
+            development. I have practical experience in data analysis and visualization through
+            projects, as well as hands-on development experience in building collaborative
+            learning systems and e-commerce applications.
+
+            I am skilled in Java, PHP, the MERN stack,
+            React.js, SQL, and API integration, and I enjoy working on projects that
+            combine analytical thinking with software engineering. Through team-based 
+            development work, I have developed strong problem-solving, communication, and
+            collaboration skills. I am motivated to continuously learn and contribute to real-world,
+            data-driven software solutions.
           </p>
 
           {/* CV Button */}
