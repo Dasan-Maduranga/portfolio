@@ -8,6 +8,20 @@ const skillnetImages = Object.values(
   })
 );
 
+const ecommerceImages = Object.values(
+  import.meta.glob("../assets/EcommerceDashboardImages/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+    import: "default",
+  })
+);
+
+const salesImages = Object.values(
+  import.meta.glob("../assets/SalesDashboardImages/*.{png,jpg,jpeg,webp}", {
+    eager: true,
+    import: "default",
+  })
+);
+
 export default function Projects() {
   const navigate = useNavigate();
 
@@ -15,6 +29,8 @@ export default function Projects() {
     skillnetImages.length > 0 ? skillnetImages[0] : "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
     "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
     "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80",
+    ecommerceImages.length > 0 ? ecommerceImages[0] : "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    salesImages.length > 0 ? salesImages[0] : "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
   ];
 
   return (
@@ -27,7 +43,7 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map((p, idx) => (
+          {projects.slice(0, 5).map((p, idx) => (
             <div
               key={p.title}
               className="group relative rounded-2xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_60px_rgba(34,211,238,0.25)] transition-all duration-300 hover:-translate-y-2"
@@ -35,11 +51,15 @@ export default function Projects() {
               tabIndex={0}
               onClick={() => {
                 if (p.title.toLowerCase().includes("skillnet")) navigate("/skillnet");
+                if (p.title.toLowerCase().includes("e-commerce dashboard")) navigate("/ecommerce-dashboard");
+                if (p.title.toLowerCase().includes("sales dashboard")) navigate("/sales-dashboard");
               }}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
                   if (p.title.toLowerCase().includes("skillnet")) navigate("/skillnet");
+                  if (p.title.toLowerCase().includes("e-commerce dashboard")) navigate("/ecommerce-dashboard");
+                  if (p.title.toLowerCase().includes("sales dashboard")) navigate("/sales-dashboard");
                 }
               }}
             >

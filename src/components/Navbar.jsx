@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#020b1a]/80 backdrop-blur border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">
-          Portfolio<span className="text-cyan-400">.</span>
+          Dasan<span className="text-cyan-400"> Maduranga</span>
         </h1>
 
         <ul className="flex gap-6">

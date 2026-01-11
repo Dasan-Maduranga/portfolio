@@ -7,6 +7,8 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import SkillnetProject from "./pages/SkillnetProject";
+import EcommerceDashboard from "./pages/EcommerceDashboard";
+import SalesDashboard from "./pages/SalesDashboard";
 import Footer from "./components/Footer";
 
 
@@ -29,6 +31,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/skillnet" element={<SkillnetProject />} />
+        <Route path="/ecommerce-dashboard" element={<EcommerceDashboard />} />
+        <Route path="/sales-dashboard" element={<SalesDashboard />} />
       </Routes>
     </div>
   );
