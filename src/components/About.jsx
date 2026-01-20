@@ -1,4 +1,3 @@
-import profileImg from "../assets/profile.jpeg";
 import { useState } from "react";
 
 export default function About() {
@@ -18,42 +17,19 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[#020b1a] flex items-center px-10"
+      className="min-h-screen bg-[#020b1a] flex items-center px-3 sm:px-4 md:px-6 py-8"
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-        {/* LEFT – IMAGE WITH GLOW */}
-        <div className="flex justify-center">
-          <div className="relative w-72 h-72 rounded-full flex items-center justify-center">
-            
-            {/* Glow */}
-            <div className="absolute inset-0 rounded-full 
-                            bg-cyan-400 blur-2xl opacity-30"></div>
-
-            {/* Border ring */}
-            <div className="relative w-72 h-72 rounded-full 
-                            border-4 border-cyan-400 
-                            shadow-[0_0_80px_#22d3ee]">
-              <img
-                src={profileImg}
-                alt="About profile"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT – CONTENT */}
-        <div>
-          <h2 className="text-4xl font-bold mb-2">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1">
             About <span className="text-cyan-400">Me</span>
           </h2>
 
-          <h3 className="text-xl text-white mb-4">
-            Full Stack Developer!
+          <h3 className="text-xl sm:text-2xl md:text-3xl text-white mb-3">
+            Aspiring Business Intelligence!
           </h3>
 
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
            I am an ICT undergraduate with a strong interest in Business
             Intelligence and full-stack software
             development. I have practical experience in data analysis and visualization through

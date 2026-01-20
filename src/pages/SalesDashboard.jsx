@@ -57,6 +57,11 @@ export default function SalesDashboard() {
   const next = () => setIndex((i) => (i + 1) % heroImages.length);
   const prev = () => setIndex((i) => (i - 1 + heroImages.length) % heroImages.length);
 
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     if (!hasImages) return;
     setIsFading(true);

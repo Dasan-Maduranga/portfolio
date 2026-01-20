@@ -80,7 +80,7 @@ export default function Footer() {
                 Dasan Maduranga
               </h3>
               <p className="text-cyan-400 font-semibold text-sm mb-1">
-                Full Stack Developer
+                Aspiring Business Intelligence
               </p>
               <p className="text-gray-400 text-sm">
                 Sri Lanka 🇱🇰

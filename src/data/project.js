@@ -21,25 +21,11 @@ const projects = [
     github: "https://github.com/sasi708/GEMORA.git",
   },
   {
-    title: "E-Commerce Analytics Dashboard",
+    title: "Dashboards – Analytics & Visualization",
     desc:
-      "Interactive Power BI dashboard analyzing sales, revenue, and customer behavior.",
-    tech: "Power BI",
-    github: "https://github.com/Dasan-Maduranga/E-commerce-dashboard.git",
-  },
-  {
-    title: "E-commerce Dashboard",
-    desc:
-      "Comprehensive analytics dashboard for tracking e-commerce metrics and performance.",
-    tech: "Power BI, Excel, Data Analytics",
-    github: "https://github.com/Dasan-Maduranga/E-commerce-dashboard.git",
-  },
-  {
-    title: "Sales Dashboard",
-    desc:
-      "Real-time sales tracking and visualization dashboard for business insights.",
+      "Collection of interactive dashboards for data analysis, business intelligence, and performance tracking.",
     tech: "Power BI, Data Visualization, Analytics",
-    github: "https://github.com/Dasan-Maduranga/Sales-dashboard.git",
+    github: "https://github.com/Dasan-Maduranga/dashboards.git",
   },
 ];
 

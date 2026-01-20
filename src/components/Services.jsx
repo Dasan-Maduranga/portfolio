@@ -2,7 +2,7 @@ const services = [
   {
     icon: "📊",
     title: "Dashboard Development",
-    description: "Creating interactive and insightful dashboards using Power BI and data visualization tools to transform complex data into actionable business intelligence.",
+    description: "Creating interactive and insightful dashboards using Power BI, leveraging Pandas and NumPy for data cleaning, transformation, and analysis, to convert complex datasets into actionable business intelligence.",
   },
   {
     icon: "🎨",

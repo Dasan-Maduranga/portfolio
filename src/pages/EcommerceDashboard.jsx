@@ -111,15 +111,16 @@ export default function EcommerceDashboard() {
   const navigate = useNavigate();
 
   const handleBackToProjects = () => {
-    navigate("/");
-    setTimeout(() => {
-      const projectsSection = document.getElementById("projects");
-      projectsSection?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    navigate("/dashboards");
   };
 
   const next = () => setIndex((i) => (i + 1) % galleryImages.length);
   const prev = () => setIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (galleryImages.length === 0) return;
@@ -143,7 +144,7 @@ export default function EcommerceDashboard() {
             onClick={handleBackToProjects}
             className="inline-flex items-center gap-2 rounded-full border border-cyan-400 px-4 py-2 text-cyan-300 hover:bg-cyan-400 hover:text-black transition shadow-[0_10px_30px_rgba(34,211,238,0.25)]"
           >
-            ← Back to Projects
+            ← Back to Dashboard
           </button>
         </div>
         {/* Header */}
